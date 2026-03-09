@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Medical Prediction</title>
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<script>
+
+function showForm() {
+
+var disease = document.getElementById("disease").value;
+
+if (disease == "heart") {
+document.getElementById("heartForm").style.display = "block";
+document.getElementById("diabetesForm").style.display = "none";
+}
+
+else if (disease == "diabetes") {
+document.getElementById("heartForm").style.display = "none";
+document.getElementById("diabetesForm").style.display = "block";
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Medical Disease Prediction</h2>
+
+<form method="POST">
+
+{% csrf_token %}
+
+<label>Select Disease</label>
+
+<select name="disease" id="disease" onchange="showForm()">
+
+<option value="">Select</option>
+<option value="heart">Heart Disease</option>
+<option value="diabetes">Diabetes</option>
+
+</select>
+
+<br><br>
+
+<!-- HEART FORM -->
+
+<div id="heartForm" style="display:none;">
+
+<h3>Heart Inputs</h3>
+
+<input type="number" name="age" placeholder="Age">
+
+<input type="number" name="sex" placeholder="Sex">
+
+<input type="number" name="cp" placeholder="Chest Pain Type">
+
+<input type="number" name="trestbps" placeholder="Blood Pressure">
+
+<input type="number" name="chol" placeholder="Cholesterol">
+
+<input type="number" name="fbs" placeholder="Fasting Blood Sugar">
+
+<input type="number" name="restecg" placeholder="Rest ECG">
+
+<input type="number" name="thalach" placeholder="Max Heart Rate">
+
+<input type="number" name="exang" placeholder="Exercise Angina">
+
+<input type="number" step="any" name="oldpeak" placeholder="Oldpeak">
+
+<input type="number" name="slope" placeholder="Slope">
+
+<input type="number" name="ca" placeholder="Major Vessels">
+
+<input type="number" name="thal" placeholder="Thal">
+
+</div>
+
+<!-- DIABETES FORM -->
+
+<div id="diabetesForm" style="display:none;">
+
+<h3>Diabetes Inputs</h3>
+
+<input type="number" name="Pregnancies" placeholder="Pregnancies">
+
+<input type="number" name="Glucose" placeholder="Glucose">
+
+<input type="number" name="BloodPressure" placeholder="Blood Pressure">
+
+<input type="number" name="SkinThickness" placeholder="Skin Thickness">
+
+<input type="number" step="any" name="Insulin" placeholder="Insulin">
+
+<input type="number" step="any" name="BMI" placeholder="BMI">
+
+<input type="number" step="any" name="DiabetesPedigreeFunction" placeholder="Diabetes Pedigree">
+
+<input type="number" name="Age" placeholder="Age">
+
+</div>
+
+<br>
+
+<button type="submit">Predict</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
