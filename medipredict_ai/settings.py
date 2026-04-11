@@ -80,8 +80,8 @@ import dj_database_url
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        'default': dj_database_url.parse(os.getenv("postgresql://heart_and_diabeties_prediction_user:hD4msxzGA3hiCOWMVjjN8qFHUIa7DSmF@dpg-d79velc50q8c73adh4pg-a/heart_and_diabeties_prediction"))
+        'default': dj_database_url.parse('postgresql://heart_and_diabeties_prediction_user:hD4msxzGA3hiCOWMVjjN8qFHUIa7DSmF@dpg-d79velc50q8c73adh4pg-a/heart_and_diabeties_prediction')
+        
     }
 }
 
