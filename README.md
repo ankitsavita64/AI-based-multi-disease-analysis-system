@@ -127,3 +127,7 @@ python Backend Developer | Django developer | ai engineer
 
 This project is created for learning and research purposes during college pursuing as last year college project.
 
+# Here is some links 
+Live url- https://ai-based-multi-disease-analysis-system-hs5w.onrender.com
+Linkedin link- https://www.linkedin.com/in/ankit-savita-91a3923b3/
+
