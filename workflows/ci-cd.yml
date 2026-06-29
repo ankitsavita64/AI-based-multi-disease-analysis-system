@@ -26,6 +26,6 @@ jobs:
     - name: Run tests
       run: python manage.py test
 
-    '''👇 Deploy trigger (CD part)
+    👇 Deploy trigger (CD part)
     - name: Deploy to Render
-      run: curl -X POST https://api.render.com/deploy/...
+      run: curl -X POST https://ai-based-multi-disease-analysis-system-hs5w.onrender.com
